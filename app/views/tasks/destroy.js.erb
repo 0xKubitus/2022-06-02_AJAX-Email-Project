@@ -1,0 +1,8 @@
+<%# 
+To double-check that AJAX is working -> 
+alert("le fichier JS est exécuté!");
+%>
+
+var mytask = document.getElementById("task-id<%= @task.id %>");
+
+mytask.remove();
