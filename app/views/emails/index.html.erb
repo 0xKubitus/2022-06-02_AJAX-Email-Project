@@ -30,4 +30,28 @@
 </table>
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div id="main-container">
+
+  <div id="mail-list">
+    <ul>
+      <% @emails.each do |email| %>
+        <li id="email-ID-<%= email.id %>"><%= link_to "#{email.object}", email_path(email.id), remote: true %></li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <div id="opened-mail">
+    <p>bla</p>
+  </div>
+
+</div>
+
+
 

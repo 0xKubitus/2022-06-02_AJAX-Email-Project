@@ -5,3 +5,17 @@
 @import "font-awesome";
 @import "components/*";
 
+#main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid black;
+}
+
+#mail-list {
+  border: 1px solid green;
+}
+  
+#opened-mail {
+  border: 1px solid red;
+}
+  
