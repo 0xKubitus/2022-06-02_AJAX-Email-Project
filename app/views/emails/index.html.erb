@@ -1,44 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Emails</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Object</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @emails.each do |email| %>
-      <tr>
-        <td><%= email.object %></td>
-        <td><%= email.body %></td>
-        <td><%= link_to 'Show', email %></td>
-        <td><%= link_to 'Edit', edit_email_path(email) %></td>
-        <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Email', new_email_path %>
-
-
-
-<!-- ce qui est au dessus etait le contenu généré de base par la page, ce qui se trouve en dessous de ce commentaire c'est mes tests : -->
-
-
-
-<br>
-<br>
-<br>
-
 <h1>Mon essai de tableau à 2 colonnes : </h1>
+
+<br>
+<br>
+
+<%= button_to 'Recevoir un email', new_email_path, method='post', remote: true %>
+
+<br>
+<br>
 
 <table class="table">
   <thead class="thead-dark">
@@ -61,4 +31,3 @@
 
 <br>
 
-<%= link_to 'New Email', new_email_path %>
