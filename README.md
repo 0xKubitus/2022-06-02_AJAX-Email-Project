@@ -10,4 +10,3 @@ Enfin, balance un : 'rails s' ...
 
 __________________________________________________________________________________________________
 
-1) Il faut que tu te créées un compte pour intéragir sur le site ! (Sign up) et bien évidemment que tu te Log in.
