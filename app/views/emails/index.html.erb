@@ -27,3 +27,38 @@
 <br>
 
 <%= link_to 'New Email', new_email_path %>
+
+
+
+<!-- ce qui est au dessus etait le contenu généré de base par la page, ce qui se trouve en dessous de ce commentaire c'est mes tests : -->
+
+
+
+<br>
+<br>
+<br>
+
+<h1>Mon essai de tableau à 2 colonnes : </h1>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Liste des emails</th>
+      <th>Email sélectionné</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @emails.each do |email| %>
+      <tr>
+        <td><%= email.object %></td>
+        <td><%=  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Email', new_email_path %>

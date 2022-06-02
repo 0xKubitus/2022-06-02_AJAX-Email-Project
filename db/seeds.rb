@@ -20,5 +20,5 @@ end
 
 
 20.times do
-  my_email = Email.create(object: Faker::Lorem.words(number: 3, supplemental: true) , body: Faker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 4))
+  my_email = Email.create(object: Faker::Lorem.sentence(word_count: 1, supplemental: true, random_words_to_add: 4) , body: Faker::Lorem.sentence(word_count: 3, supplemental: true, random_words_to_add: 10))
 end
