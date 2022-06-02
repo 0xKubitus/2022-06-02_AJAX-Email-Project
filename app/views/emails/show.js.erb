@@ -1,3 +1,3 @@
 var email = document.getElementById("opened-mail");
 
-email.innerHTML = "<%= @email.body %>";
+email.innerHTML = "<%= j render 'display_email_content', email: @email %>"; 
