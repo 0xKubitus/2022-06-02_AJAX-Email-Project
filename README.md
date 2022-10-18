@@ -1,12 +1,53 @@
-DANS LE TERMINAL:
+<div align="center">
 
-Un ptit coup de : 'bundle install' ;
+[![THP Badge](https://github.com/0xKubitus/Usefull-Stuff-for-README/blob/main/assets/mkdwn-badges/the-hacking-project.svg
+)](https://www.thehackingproject.org/)
+#### June 2nd 2022
 
-Ensuite tu peux peupler en local la BDD en faisant : 'rails db:create db:migrate db:seed' ;
+# AJAX Gmail-like Project
 
-Enfin, balance un : 'rails s' ... 
+![Ruby v2.7.4](https://img.shields.io/static/v1?logo=ruby&label=Ruby&message=v2.7.4&color=0B0D0E&style=for-the-badge&labelColor=CC342D)
+![Rails v5.2.3](https://img.shields.io/static/v1?logo=rubyonrails&label=Rails&message=v5.2.3&color=0B0D0E&style=for-the-badge&labelColor=cc0000)
 
-... et on se retrouve dans ton browser sur : "http://localhost:3000/"
+During this project, I have created a fake ***Email Viewer*** web application.  
 
-__________________________________________________________________________________________________
+It offers less features than Gmail, but it uses AJAX and Ruby on Rails so it's a really cool project! :wink:  
+The goal was not to create a new interface to receive our real emails on, but to learn and practice AJAX requests on a Rails 5 app.
+
+</div>
+<br/>
+  
+  
+## How to use this repo:
+<ol>
+  <li>Simply clone this repo on your machine;</li>
+  <li>then open this repo in a Terminal window;</li>
+  <li>run the following commands in your Terminal:</li>
+</ol>
+
+ ```
+bundle install
+``` 
+
+ ```
+rails db:create db:migrate db:seed
+``` 
+
+ ```
+rails server
+``` 
+
+<br/>
+
+You can now open your browser on: "http://localhost:3000/" to try out my ***Email Viewer*** using AJAX on a Rails 5 app!
+
+<br/>
+
+## Features included in this project:
+<ul>
+  <li>Create new emails;</li>
+  <li>Open/Read emails;</li>
+  <li>Delete emails;</li>
+  <li>Manage Unread & Read emails;</li>
+</ul>
 
