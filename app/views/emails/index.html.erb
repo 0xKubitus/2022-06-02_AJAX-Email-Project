@@ -1,43 +1,52 @@
-<p id="notice"><%= notice %></p>
+<%= button_to 'Receive a new email', emails_path, class: "btn btn-danger" %>
 
 
 
-<div  id="main-container">
-  <table class="table">
+<br>
+
+
+
+<!-- CONTAINER PRINCIPAL DES EMAILS -->
+<section id="mailbox-main">
+
+  <!-- TABLEAU DE GAUCHE -->
+  <table class="table table-bordered table-hover">
     <thead class="thead-dark">
-      <tr>
-        <th>Liste des emails (email.object)</th>
-        <%# <th>Email sélectionné (email.body)</th> %>
-        <th colspan="3"></th>
+      <tr class="emails-tr">
+        <th class="text-center">INBOX:</th>
       </tr>
     </thead>
-
     <tbody>
-      <% @emails.each do |email| %>
-        <tr>
-          <td id="email-ID-<%= email.id %>"><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>     
-        </tr>
-      <% end %>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
+      <tr class="emails-tr">
+        <th scope="row">fake email here</th>
+      </tr>
     </tbody>
   </table>
 
-  <table class="table">
-    <thead class="thead-dark">
-      <tr>
-        <th>Email sélectionné (email.body)</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+  <!-- PARTIE DROITE = "Email Sélectionné" -->
+  <div id="selected-email">
+    <p>treeeees treeeeeeeeeeeeeeeeeeeeeeeeees loooooooooooooooooooooong test</p>
+  </div>
 
-    <tbody>
-
-        <tr>
-          <td><p>bla bla bla</p></td>     
-        </tr>
-
-    </tbody>
-  </table>
-</div>
+</section> 
 
 
 
