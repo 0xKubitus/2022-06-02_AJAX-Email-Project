@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require 'faker'
+
+5.times do
+  new_email = Email.create(object: Faker::Quote.yoda, body: Faker::Movies::StarWars.quote)
+end
