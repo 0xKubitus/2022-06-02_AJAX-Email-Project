@@ -10,7 +10,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(email_params)
+    @email = Email.new(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
 
     # respond_to do |format|
       if @email.save

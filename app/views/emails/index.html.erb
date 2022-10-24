@@ -2,8 +2,12 @@
 
 <h1>Emails</h1>
 
-<table>
-  <thead>
+<br>
+<%=  button_to 'New Email', emails_path %>
+<br>
+
+<table class="table table-striped">
+  <thead class="thead-dark">
     <tr>
       <th>Object</th>
       <th>Body</th>
@@ -16,7 +20,6 @@
       <tr>
         <td><%= email.object %></td>
         <td><%= email.body %></td>
-        <td><%= link_to 'Show', email %></td>
         <td><%= link_to 'Edit', edit_email_path(email) %></td>
         <td><%= link_to 'Destroy', email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -24,6 +27,6 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Email', new_email_path %>
+
+
