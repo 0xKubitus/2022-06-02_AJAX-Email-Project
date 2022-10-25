@@ -1,3 +1,148 @@
 // Place all the styles related to the emails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// STUFF FROM SCAFFOLD
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+  // padding-bottom: 5px;
+  max-height: 45px;
+  vertical-align: middle;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label {
+  display: block;
+}
+
+
+// PROJECT HEADER
+#project_header {
+  display: flex;
+  justify-content: center;
+}
+
+
+// NEW EMAIL BUTTON
+#new-email-btn {
+  margin-left: 20px;
+}
+
+
+// INBOX (LEFT PART OF THE TABLE)
+#mailbox-main {
+  display:flex;
+  justify-content: space-between;
+  border: 1px solid blue;
+  min-height: 400px; 
+}
+
+#emails-list {
+  // max-width: 33%;
+  // min-width: 27%;
+}
+
+#emails-list-header {
+  vertical-align: middle;
+}
+
+
+// SELECTED EMAIL (RIGHT PART OF THE TABLE)
+#selected-email-container {
+  max-width: 82%;
+  min-width: 67%;
+  margin-right: 20px;
+  border-left: 2px solid red;
+}
+
+#selected-email-header-div {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#selected-email-header {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#selected-email-block {
+  margin: 10px 0px 0px 10px;
+  border: 1px solid black;
+}
