@@ -9,6 +9,10 @@ class EmailsController < ApplicationController
     @email = Email.new
   end
 
+  def show
+    @email = Email.find(params[:id])
+  end
+
   def create
     @email = Email.new(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
 
