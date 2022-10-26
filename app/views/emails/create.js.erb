@@ -3,4 +3,5 @@
 
 document.getElementById("emails-list").insertAdjacentHTML("afterbegin", "<%= j render 'emailObject', email: @email %>");
 
-
+const selectedEmailDiv = document.getElementById("selected-email-block");
+selectedEmailDiv.innerHTML = "<%= j render 'emailBody', email: @email %>";

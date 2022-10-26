@@ -2,7 +2,15 @@
 
 <br/>
 
-<div style="margin-top: 30px; ">
-  <button>Mark as "Unread"</button>
-  <button>Delete Email</button>
+<div style="margin-top: 30px;">
+  <button style="background-color: lightgrey">Mark as "Read"/"Unread"</button>
+
+  <%# <button style="background-color: lightcoral">Delete Email</button> %>
+  <%= button_to('Delete Email', email_path(@email), method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }) %>
+
+  <br/>
+  <br/>
+
+  <%= link_to 'Go Back to Inbox', root_path, style: "color: blue;" %>
+
 </div>
