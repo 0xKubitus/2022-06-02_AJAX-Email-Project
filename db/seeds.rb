@@ -8,7 +8,10 @@
 
 require 'faker'
 
+
 Email.delete_all
+Email.destroy_all
+
 
 5.times do
   new_email = Email.create(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)

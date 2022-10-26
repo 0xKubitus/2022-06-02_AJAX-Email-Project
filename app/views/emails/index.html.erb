@@ -1,5 +1,5 @@
 <div id="project-header">
-  <h1>Gmail-like Project:</h1>
+  <h1 style="color: red;">Gmail-like Project:</h1>
   <h3>my fake Inbox using AJAX</h3>
 
   <br>
@@ -27,7 +27,7 @@
     <tbody id="emails-list">
       <% @emails.each do |email| %>
         <tr>
-          <td><%= link_to "#{email.object}", email_path(email) %></td>
+          <td><%= link_to email.object, email_path(email), remote: true %></td>
         </tr>
       <% end %>
     </tbody>
