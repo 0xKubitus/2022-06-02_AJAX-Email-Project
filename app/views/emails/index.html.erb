@@ -5,7 +5,7 @@
   <br>
 
   <div>
-    <%= button_to 'New Email', emails_path, class: "btn btn-danger", id: "new-email-btn" %>
+    <%= button_to 'New Email', emails_path, remote: true, class: "btn btn-danger", id: "new-email-btn" %>
     <p id="notice"><%= notice %></p>
   </div>
 </div>

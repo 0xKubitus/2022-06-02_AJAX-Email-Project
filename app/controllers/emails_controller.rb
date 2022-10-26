@@ -12,22 +12,10 @@ class EmailsController < ApplicationController
   def create
     @email = Email.new(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
 
-    # respond_to do |format|
-      if @email.save
-    # only html format for now, as we are not making AJAX requests yet:
-        redirect_to root_path
-        flash[:notice] = "Email successfully created" 
-
-      # format.json { ... } would be here
-
-      else
-      # format.html { ... } would be here instead of the 2 following lines:
-        redirect_to root_path
-        flash[:notice] = "Error in creating new Email" 
-
-      # format.json { ... } would be here
-      end
-    # end
+    respond_to do |format|
+      # format.html { redirect_to books_path }
+      format.js { }
+    end
   end
 
   def edit
