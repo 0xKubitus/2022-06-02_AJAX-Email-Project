@@ -1,1 +1,3 @@
 alert("le fichier 'create.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT
+
+document.getElementById("emails-list").insertAdjacentHTML("afterbegin", "<%= j render 'email', email: @email %>")
