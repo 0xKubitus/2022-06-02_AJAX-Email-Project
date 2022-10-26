@@ -14,10 +14,10 @@ class EmailsController < ApplicationController
   end
 
   def create
-    @email = Email.new(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
+    @email = Email.create(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
 
     respond_to do |format|
-      # format.html { redirect_to books_path }
+      format.html { redirect_to books_path }
       format.js { }
     end
   end
