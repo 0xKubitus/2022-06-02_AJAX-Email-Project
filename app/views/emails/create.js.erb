@@ -1,7 +1,6 @@
 <%# alert("le fichier 'create.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT %>
 
 
-document.getElementById("emails-list").insertAdjacentHTML("afterbegin", "<%= j render 'emailObject', email: @email %>");
+document.getElementById("emails-list").insertAdjacentHTML("beforeend", "<%= j render 'emailObject', email: @email %>");
 
-const selectedEmailDiv = document.getElementById("selected-email-block");
-selectedEmailDiv.innerHTML = "<%= j render 'emailBody', email: @email %>";
+document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>";

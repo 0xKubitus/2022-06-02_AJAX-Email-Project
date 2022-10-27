@@ -1,12 +1,10 @@
 <%# alert("le fichier 'destroy.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT %>
 
 <%# REMOVING LEFT PART / @email.object: %>
-const emailObject = document.getElementById("email-<%=@email.id%>-object");
-emailObject.remove();
+document.getElementById("email-<%=@email.id%>-object").remove();
 
 
 <%# REMOVING RIGHT PART / @email.body: %>
-const emailBody = document.getElementById("email-<%=@email.id%>-body");
 <%# alert("si ce message s'affiche, je peux supprimer l'élément : `email-<%=@email.id%><%# -body`"); %>
-emailObject.remove();
+document.getElementById("email-<%=@email.id%>-body-div").remove();
 
