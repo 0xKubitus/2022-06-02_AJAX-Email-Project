@@ -45,9 +45,9 @@ You can now open your browser on: "http://localhost:3000/" to try out my ***Emai
 
 ## Features included in this project:
 <ul>
-  <li>Create new emails;</li>
-  <li>Open/Read emails;</li>
-  <li>Delete emails;</li>
-  <li>Manage Unread & Read emails;</li>
+  <li>:white_check_mark: Create new emails;</li>
+  <li>:white_check_mark: Open/Read emails;</li>
+  <li>:white_check_mark: Delete emails;</li>
+  <li>:soon: Manage Unread & Read emails;</li>
 </ul>
 
