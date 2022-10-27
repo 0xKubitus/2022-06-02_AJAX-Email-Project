@@ -26,7 +26,7 @@
     </thead>
     <tbody id="emails-list">
       <% @emails.each do |email| %>
-        <tr>
+        <tr id="email-<%=email.id%>-object">
           <td><%= link_to email.object, email_path(email), remote: true %></td>
         </tr>
       <% end %>

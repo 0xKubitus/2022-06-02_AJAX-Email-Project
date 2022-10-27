@@ -1,1 +1,5 @@
-alert("le fichier 'destroy.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT
+<%# alert("le fichier 'destroy.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT %>
+
+
+const emailObject = document.getElementById("newly-created-email-row");
+emailObject.remove();
