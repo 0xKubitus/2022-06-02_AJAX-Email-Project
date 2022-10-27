@@ -39,7 +39,7 @@ rails server
 
 <br/>
 
-You can now open your browser on: "http://localhost:3000/" to try out my ***Email Viewer*** using AJAX on a Rails 5 app!
+You can now open your browser on: "http://localhost:3000/" to try out my ***Email Inbox Viewer*** app using AJAX on a Rails 5!
 
 <br/>
 
