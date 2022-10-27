@@ -7,6 +7,6 @@ emailObject.remove();
 
 <%# REMOVING RIGHT PART / @email.body: %>
 const emailBody = document.getElementById("email-<%=@email.id%>-body");
-alert("si ce message s'affiche, je peux supprimer l'élément : `email-<%=@email.id%>-body`");
-<%# emailObject.remove(); %>
+<%# alert("si ce message s'affiche, je peux supprimer l'élément : `email-<%=@email.id%><%# -body`"); %>
+emailObject.remove();
 

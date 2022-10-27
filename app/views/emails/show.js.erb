@@ -1,7 +1,6 @@
 <%# alert("le fichier 'show.js.erb' est exécuté! (AJAX is working)"); // SHOULD BE A COMMENT %>
 
-const selectedEmailDiv = document.getElementById("selected-email-block");
-selectedEmailDiv.innerHTML = "<%= j render 'emailBody', email: @email %>";
+document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>";
 
 
 <%# const selectedEmailText = document.createElement("p"); %>
