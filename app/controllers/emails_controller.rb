@@ -25,7 +25,7 @@ class EmailsController < ApplicationController
     @email.update(body: @email.body)
 
     respond_to do |format|
-      format.html { redirect_to emails_path, notice: "Email was successfully updated." }
+      format.html { redirect_to emails_path, notice: "Email successfully updated." }
       format.js {}
     end
   end
@@ -47,8 +47,14 @@ class EmailsController < ApplicationController
   def destroy
     @email = Email.find(params[:id])
     @email.destroy
-    redirect_to root_path
-    flash[:notice] = "Email successfully deleted"
+
+    respond_to do |format|
+      format.html { redirect_to emails_path, notice: "Email successfully deleted." }
+      format.js {}
+    end
+
+    # redirect_to root_path
+    # flash[:notice] = "Email successfully deleted"
   end
 
 
