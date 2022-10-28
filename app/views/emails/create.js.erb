@@ -1,7 +1,9 @@
 <%# alert("le fichier 'create.js.erb' est exécuté! (donc AJAX marche)"); // SHOULD BE A COMMENT %>
 
 
-document.getElementById("emails-list").insertAdjacentHTML("beforeend", "<%= j render 'emailObject', email: @email %>");
+document.getElementById("emails-list").insertAdjacentHTML("afterbegin", "<%= j render 'emailObject', email: @email %>");
 
-  <%# BELOW IS USELESS AS WE NEED EMAILS NOT TO BE 'Read' BY DEFAULT: %>
-<%# document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>"; %>
+
+
+  <%# UNCOMMENT BELOW LINE TO DISPLAY NEW EMAIL BODY RIGHT AFTER CLICKING NEW EMAIL BUTTON: %>
+<%# document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email";  %>

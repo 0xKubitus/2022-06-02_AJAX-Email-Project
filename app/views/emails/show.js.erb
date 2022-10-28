@@ -1,6 +1,12 @@
 <%# alert("le fichier 'show.js.erb' est exécuté! (AJAX is working)"); // SHOULD BE A COMMENT %>
 
+  <%# DISPLAY OF THE EMAIL'S BODY: %>
 document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>";
+
+  <%# SET CLASS ATTRIBUTE "is-read": %>
+document.getElementById("email-<%= @email.id %>-object-link").classList.add("is-read");
+
+
 
 
 <%# const selectedEmailText = document.createElement("p"); %>

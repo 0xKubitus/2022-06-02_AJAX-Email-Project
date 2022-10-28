@@ -25,11 +25,10 @@ pre {
 }
 
 a {
-  color: #000;
+  text-decoration: none;
+  font-weight: bold;
 
-  &:visited {
-    color: #666;
-  }
+  color: #000;
 
   &:hover {
     color: #fff;
@@ -145,4 +144,10 @@ label {
 #selected-email-block {
   margin: 10px 0px 0px 10px;
   // border: 1px solid black;
+}
+
+
+
+.is-read {
+  font-weight: normal;
 }
