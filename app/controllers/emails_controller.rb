@@ -66,6 +66,20 @@ class EmailsController < ApplicationController
   end
 
 
+  def email_unread_toggle
+    @email = Email.find(params[:id])
+    if @email.read = false
+      @email.edit(read: true)
+    # elsif @email.read = true
+    #   @email.edit(read: false)
+    end
+    @email.save
+
+    redirect_to root_path
+    flash[:notice] = "Email status successfully changed"
+  end
+
+
   private
 
     # Use callbacks to share common setup or constraints between actions.
@@ -76,8 +90,11 @@ class EmailsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def email_params
-      params.require(:email).permit(:object, :body)
+      params.require(:email).permit(:id, :object, :body, :read)
     end
 
+
     
+
+
 end # end of Class EmailsController

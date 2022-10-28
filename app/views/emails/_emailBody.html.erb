@@ -5,8 +5,9 @@
   <br/>
 
   <div style="margin-top: 30px; display: flex;">
-    <button style="background-color: lightgrey">Mark as "Read"/"Unread"</button>
+    <%= button_to'Mark as "Read"/"Unread"', email_unread_toggle_path(@email), method: "get" %>    
+    
     <%= button_to('Delete Email', email_path(@email), method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, style: 'background-color: lightcoral;') %>
   </div>
 
-</div>
+</div> 
