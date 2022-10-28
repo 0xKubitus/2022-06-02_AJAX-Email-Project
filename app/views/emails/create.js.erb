@@ -3,4 +3,5 @@
 
 document.getElementById("emails-list").insertAdjacentHTML("beforeend", "<%= j render 'emailObject', email: @email %>");
 
-document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>";
+  <%# BELOW IS USELESS AS WE NEED EMAILS NOT TO BE 'Read' BY DEFAULT: %>
+<%# document.getElementById("selected-email-block").innerHTML = "<%= j render 'emailBody', email: @email %>"; %>
