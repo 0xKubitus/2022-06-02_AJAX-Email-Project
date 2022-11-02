@@ -45,12 +45,8 @@ class EmailsController < ApplicationController
   def update
     @email = Email.find(params[:id])
 
-    if @email.read = true
-      @email.read = false
-    # elsif @email.read = false
-    #   @email.read = true
-      @email.save
-    end
+    @email.read == true ? @email.read == false : @email.read == true
+    @email.save
 
     if @email.save 
       respond_to do |format|

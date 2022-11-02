@@ -1,1 +1,11 @@
-alert("le fichier 'update.js.erb' est exécuté! (AJAX is working)"); // SHOULD BE A COMMENT
+<%# alert("le fichier 'update.js.erb' est exécuté! (AJAX is working)"); // SHOULD BE A COMMENT %>
+
+
+  <%# TOGGLE CLASS ATTRIBUTE "is-read" ON BUTTON: %>
+document.getElementById("email-<%= @email.id %>-object-link").classList.toggle("is-read");
+  <%# TOGGLE CLASS ATTRIBUTE "is-unread" ON BUTTON: %>
+document.getElementById("email-<%= @email.id %>-object-link").classList.toggle("is-unread");
+  <%# TOGGLE "Mark as Unread" BUTTON %>
+document.getElementById("set-unread-btn").classList.toggle("hidden");
+  <%# TOGGLE "Mark as Read" BUTTON %>
+document.getElementById("set-read-btn").classList.toggle("hidden");
