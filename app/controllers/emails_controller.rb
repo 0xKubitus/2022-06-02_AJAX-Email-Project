@@ -24,15 +24,13 @@ class EmailsController < ApplicationController
 
 
   def show
-    if @email.read = false
-      @email.update(read: true)
-    else
-      @email.update(body: @email.body) # here it seems I still need to pretend to update something for AJAX to take happen
-    end
-    
+    @email.read = true
+
+    # @email.update(body: @email.body) # here it seems that I need to pretend to update something for AJAX to happen
+  
     if @email.save 
       respond_to do |format|
-        format.html { redirect_to emails_path, notice: "Email successfully updated." }
+        format.html { redirect_to emails_path }
         format.js {}
       end
     end
@@ -46,9 +44,20 @@ class EmailsController < ApplicationController
 
   def update
     @email = Email.find(params[:id])
-    @email.update(email_params)
-    redirect_to root_path
-    flash[:notice] = "Email successfully updated"
+
+    if @email.read = true
+      @email.update(read: false)
+    end
+
+    if @email.save
+      respond_to do |format|
+        format.html { redirect_to emails_path, notice: "Email status successfully changed." }
+        format.js { }
+      end
+    end
+
+    # redirect_to root_path
+    # flash[:notice] = "Email successfully updated"
   end
 
 
@@ -60,23 +69,28 @@ class EmailsController < ApplicationController
       format.html { redirect_to emails_path, notice: "Email successfully deleted." }
       format.js {}
     end
-
-    # redirect_to root_path
-    # flash[:notice] = "Email successfully deleted"
   end
 
 
   def email_unread_toggle
     @email = Email.find(params[:id])
+
     if @email.read = false
-      @email.edit(read: true)
+      @email.update(read: true)
     # elsif @email.read = true
     #   @email.edit(read: false)
     end
-    @email.save
 
-    redirect_to root_path
-    flash[:notice] = "Email status successfully changed"
+    # if @email.save
+
+    #   respond_to do |format|
+    #     format.html { redirect_to emails_path, notice: "Email status successfully changed." }
+    #     format.js {}
+    #   end
+    # end
+
+    # redirect_to root_path
+    # flash[:notice] = "Email status successfully changed"
   end
 
 
