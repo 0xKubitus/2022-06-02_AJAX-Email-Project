@@ -13,6 +13,10 @@ Email.delete_all
 Email.destroy_all
 
 
-10.times do
-  new_email = Email.create(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda)
+7.times do
+  new_email = Email.create(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda, read: false)
+end
+
+3.times do
+  new_email = Email.create(object: Faker::Movies::StarWars.quote, body: Faker::Quote.yoda, read: true)
 end

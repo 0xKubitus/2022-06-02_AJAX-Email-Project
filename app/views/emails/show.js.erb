@@ -5,7 +5,8 @@ document.getElementById("selected-email-block").innerHTML = "<%= j render 'email
 
   <%# SET CLASS ATTRIBUTE "is-read": %>
 document.getElementById("email-<%= @email.id %>-object-link").classList.add("is-read");
-
+  <%# REMOVE CLASS ATTRIBUTE "is-unread": %>
+document.getElementById("email-<%= @email.id %>-object-link").classList.remove("is-unread");
 
 
 

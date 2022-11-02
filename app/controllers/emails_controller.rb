@@ -30,7 +30,7 @@ class EmailsController < ApplicationController
   
     if @email.save 
       respond_to do |format|
-        format.html { redirect_to emails_path }
+        format.html { redirect_to root_path }
         format.js {}
       end
     end
@@ -46,13 +46,16 @@ class EmailsController < ApplicationController
     @email = Email.find(params[:id])
 
     if @email.read = true
-      @email.update(read: false)
+      @email.read = false
+    # elsif @email.read = false
+    #   @email.read = true
+      @email.save
     end
 
-    if @email.save
+    if @email.save 
       respond_to do |format|
-        format.html { redirect_to emails_path, notice: "Email status successfully changed." }
-        format.js { }
+        format.html { redirect_to root_path }
+        format.js {}
       end
     end
 
