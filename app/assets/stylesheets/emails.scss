@@ -143,6 +143,7 @@ label {
 
 #selected-email-block {
   margin: 10px 0px 0px 10px;
+  display: none;
   // border: 1px solid black;
 }
 
@@ -159,3 +160,11 @@ label {
 .hidden {
   display: none;
 }
+
+// .selected-email-div {
+//   display: none;
+// }
+
+// .new-email {
+//   display: none;
+// }

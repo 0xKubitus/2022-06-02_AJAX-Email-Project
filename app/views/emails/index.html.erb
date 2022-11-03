@@ -28,7 +28,7 @@
       <% @emails.each do |email| %>
         <tr id="email-<%=email.id%>-object">
           <td>
-            <%= link_to "#{email.object}", email_path(email), id: "email-#{email.id}-object-link", class:"#{email.read ? 'is-read' : 'is-unread'}", remote: true %>
+            <%= link_to "#{email.object}", email_path(email), id: "email-#{email.id}-object-link", class:"email-link #{email.read ? 'is-read' : 'is-unread'}", remote: true %>
           </td>
         </tr>
       <% end %>
