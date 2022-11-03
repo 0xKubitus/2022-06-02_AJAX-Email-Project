@@ -1,14 +1,16 @@
 <div id="email-<%=email.id%>-body-div" class="selected-email-div">
 
+  <h5> <%=email.object%></h5>
+  <br/>
   <p id="email-<%=email.id%>-body"><%= email.body %></p>
 
   <br/>
 
   <div style="margin-top: 30px; display: flex;">
-    <%= button_to('Mark as "Unread"', email_path(@email), id: "set-unread-btn", method: "put", remote: true) %>
-    <%= button_to('Mark as "Read"', email_path(@email), id: "set-read-btn", class: "hidden", method: "put", remote: true) %>
+    <%= button_to('Mark as "Unread"', email_path(@email), class: "btn btn-sm", id: "set-unread-btn", method: "put", remote: true) %>
+    <%= button_to('Mark as "Read"', email_path(@email), class: "hidden btn btn-sm btn-secondary", id: "set-read-btn", method: "put", remote: true) %>
     
-    <%= button_to('Delete Email', email_path(@email), method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, style: 'background-color: lightcoral;') %>
+    <%= button_to('Delete Email', email_path(@email), class: "btn btn-danger btn-sm", method: "delete", remote: true, data: { confirm: 'Are you sure?', disable_with: 'loading...' }, style: 'background-color: lightcoral;') %>
   </div>
 
 </div> 
