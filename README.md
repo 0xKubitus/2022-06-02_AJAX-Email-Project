@@ -48,6 +48,6 @@ You can now open your browser on: "http://localhost:3000/" to try out my ***Emai
   <li>:white_check_mark: Create new emails;</li>
   <li>:white_check_mark: Open/Read emails;</li>
   <li>:white_check_mark: Delete emails;</li>
-  <li>:soon: Manage Unread & Read emails;</li>
+  <li>:white_check_mark: Manage Unread & Read emails;</li>
 </ul>
 
