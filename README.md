@@ -2,7 +2,6 @@
 
 [![THP Badge](https://github.com/0xKubitus/Usefull-Stuff-for-README/blob/main/assets/mkdwn-badges/the-hacking-project.svg
 )](https://www.thehackingproject.org/)
-#### June 2nd 2022
 
 # AJAX Gmail-like Project
 
